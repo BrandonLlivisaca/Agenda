@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image: radial-gradient(circle at 87.5% 12.5%, #00ffff 0, #00e3ff 25%, #0cc1ed 50%, #30a0c7 75%, #3983a4 100%);
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    overflow: hidden;   
+    justify-content: center; 
+    text-align: center;
+}
+.container{
+    width: 100%;
+    max-width: 1000px;
+    height: 50vh;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    font-size: 20px;
+    /* text-transform: uppercase; */
+    transition: all 1s;
+}
+.nota_new{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.light_mode{
+/*     background-image: radial-gradient(circle at 87.5% 12.5%, #209494 0, #14cce4 25%, #0cc1ed 50%, #30a0c7 75%, #3983a4 100%);*/
+    background-color: rgb(255, 255, 255);
+    box-shadow: -10px 10px 10px rgba(119, 114, 114, 0.6);
+}
+
+.dark_mode{
+/*     background-image: radial-gradient(circle at 50% -20.71%, #8fffff 0, #7ffffb 16.67%, #73f5ec 33.33%, #6cd8d8 50%, #67bbc1 66.67%, #64a3ac 83.33%, #618e98 100%);*/
+    background-color: black;
+    color: #fff;
+    box-shadow: -10px 10px 10px rgba(0,0,0, .5);
+}
+
+/* Light Mode */
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+}
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before{
+    position: absolute;
+    /* font-family: "Font Awesome 5 Free";
+    content: "\f185";  */
+    content: "";   
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider{
+    background-color: #ffffff;
+}
+input:checked + .slider:before{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+input:checked + .slider.round:before{
+    background-color: black;
+    /* font-family: "Font Awesome 5 Free";
+    content: "\f186"; */
+}
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round:before{
+    border-radius: 50%;
+}
+
+/* INPUT NEW_NOTE */
+.box {
+    position: relative;
+    width: 50%;
+}
+.box input{
+    width: 80%;
+    padding: 10px 0;
+    font-size: 19px;
+    color: #000000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #1e9bab;
+    outline: none;
+    background: transparent;
+}
+.box label{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    padding: 10px 0;
+    font-size: 18px;
+    pointer-events: none;
+    transition: .5s;
+}
+.box input:focus ~ label, .box input:valid ~ label{
+    top: -20px;
+    left: 50px;
+    font-size: 10px;
+}
+.box input:focus, .box input:valid {
+    color: #1e9bab;
+    border-bottom: 1px solid #1e9bab;
+}
+
+/* BUTTON ADD */
+button.add{
+    width: 45px;
+    height: 45px;
+    padding: 7px;
+    cursor: pointer;
+    border: 2px solid #00e3ff;
+    color: #00e3ff;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 1s;
+}
+button.add:hover{
+    background-color: #00e3ff;
+    color: #000000;
+    transform: translateY(-0.5em);
+    box-shadow: -4px 10px 10px #2e6067;
+    transition: all 1s;
+    outline: none;
+}
+
+/* NOTA */
+.nota{
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+    justify-content:space-evenly;
+    overflow-y: scroll;
+}
+.nota_add{
+    height: 40px;
+    margin: 5px;
+    padding: 8px;
+    background-image: radial-gradient(circle at 87.5% 12.5%, #00ffff 0, #00e3ff 25%, #0cc1ed 50%, #30a0c7 75%, #3983a4 100%);
+    width: 50%;
+    border-radius: 5px;
+}
+.delete_note{
+    width: 5%;
+    height: 40px;
+    border-radius: 10%;
+    border: none;
+    background-image: radial-gradient(circle at 87.5% 12.5%, #00ffff 0, #00e3ff 25%, #0cc1ed 50%, #30a0c7 75%, #3983a4 100%);
+    color: #fff;
+}
+.delete_note:hover{
+    cursor: pointer;
+}
