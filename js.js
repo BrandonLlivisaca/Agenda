@@ -21,7 +21,7 @@ const add_note = () => {
     const nota = document.getElementById('nota');
     let new_note = document.getElementById('new_note');
     array.push(new_note.value);
-    nota.innerHTML += "<h5 class=\"nota_add\">"+ cont+". "+new_note.value +"</h5>"+"<button id=\"btn"+ cont +"\" class=\"delete_note fa-solid fa-trash-can\" onclick=\"delete_node("+cont+")\"></button";
+    nota.innerHTML += "<p class=\"nota_add\">"+ cont+". "+new_note.value +"</p>"+"<button id=\"btn"+ cont +"\" class=\"delete_note fa-solid fa-trash-can\" onclick=\"delete_node("+cont+")\"></button";
     new_note.value = "";
 }
 

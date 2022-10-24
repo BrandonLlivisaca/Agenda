@@ -177,6 +177,9 @@ button.add:hover{
     background-image: radial-gradient(circle at 87.5% 12.5%, #00ffff 0, #00e3ff 25%, #0cc1ed 50%, #30a0c7 75%, #3983a4 100%);
     width: 50%;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
 }
 .delete_note{
     width: 5%;
@@ -188,4 +191,18 @@ button.add:hover{
 }
 .delete_note:hover{
     cursor: pointer;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width:800px)  {
+    .nota_add{
+        width: 80%;
+        font-size: 15%;
+    }
+}
+@media screen and (max-width:500px)  {
+    .nota_add{
+        font-size: 0.3em;
+    }
 }
