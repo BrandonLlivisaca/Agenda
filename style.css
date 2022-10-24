@@ -182,6 +182,7 @@ button.add:hover{
     word-break: break-all;
 }
 .delete_note{
+    margin-top: 0.4em;
     width: 5%;
     height: 40px;
     border-radius: 10%;
@@ -200,9 +201,17 @@ button.add:hover{
         width: 80%;
         font-size: 15%;
     }
+    .box label{
+        left: 10px;
+        transition: .5s;
+    }
+    .delete_note{
+        margin-top: 0.4em;
+        width: 10%;
+    }
 }
 @media screen and (max-width:500px)  {
     .nota_add{
-        font-size: 0.3em;
+        font-size: 0.4em;
     }
 }
