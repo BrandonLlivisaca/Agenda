@@ -211,6 +211,7 @@ button.add:hover{
     transform: translateY(-.9em);
     box-shadow: -4px 10px 10px #2e6067;
     outline: none;
+    color: #000000;
 }
 
 /* TITLE */
