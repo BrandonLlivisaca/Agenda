@@ -36,6 +36,12 @@ function delete_node(int){
     };
 }
 
+const clean_all = () =>{
+    array = [];
+    cont = 0;
+    const nota = document.getElementById('nota');
+    nota.innerHTML = '';
+}
 /* const delete_node = () => {
     /* buttons.forEach(element => {
         element.addEventListener('click', e=>{
