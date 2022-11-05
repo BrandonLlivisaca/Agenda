@@ -180,6 +180,7 @@ button.add:hover{
     display: flex;
     align-items: center;
     word-break: break-all;
+    /* animation: ease-in animacion 1s; */
 }
 .delete_note{
     margin-top: 0.4em;
@@ -217,6 +218,36 @@ button.add:hover{
 /* TITLE */
 h2.title{
     text-shadow: -5px 5px 5px rgb(63, 41, 41,0.4);
+}
+
+/* NOTA FINAL */
+input.nota_final{
+    margin-top: 15px;
+    width: 20px;
+    height: 20px;   
+    border-radius: 20%; 
+}
+
+.nota_final_ready{
+    background: #a8ff78;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    animation: ease-in animacion 1s;
+    transition: all 2s;
+}
+
+input.nota_final:checked{
+    background-color: red;
+}
+
+@keyframes animacion{
+    0%{
+        transform: translateX(-2em);
+        /* width: 10%; */
+    }100%{
+        transform: translateY(0);
+      /*  width: 50%; */
+    }
 }
 
 /* RESPONSIVE */
