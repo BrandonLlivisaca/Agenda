@@ -58,8 +58,8 @@ function delete_node(int){
     for(let i=0;i<array.length;i++){  
         cont += 1;      
         /*nota.innerHTML += "<h5 class=\"nota_add\">"+ (i+1)+". "+array[i] +"</h5>"+"<button id=\"btn"+ cont +"\" class=\"delete_note fa-solid fa-trash-can\" onclick=\"delete_node("+cont+")\"></button";*/
-        
-        nota.innerHTML += "<h5 class=\"nota_add\">"+ (i+1)+". "+array[i] +"</h5>"+"<button id=\"btn"+ cont +"\" class=\"delete_note fa-solid fa-trash-can\" onclick=\"delete_node("+cont+")\"></button";
+        nota.innerHTML += "<p class=\"nota_add\" id=\"p_"+cont+"\">"+ cont+". "+new_note.value +"</p>"+"<input type=\"checkbox\" class=\"nota_final\"name=\"\" id=\"ch_"+cont+"\" onchange=\"status("+cont+")\"></input>"+"<button id=\"btn"+ cont +"\" class=\"delete_note fa-solid fa-trash-can\" onclick=\"delete_node("+cont+")\"></button";
+        //nota.innerHTML += "<h5 class=\"nota_add\">"+ (i+1)+". "+array[i] +"</h5>"+"<button id=\"btn"+ cont +"\" class=\"delete_note fa-solid fa-trash-can\" onclick=\"delete_node("+cont+")\"></button";
 
     };
 }
